@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital – Kristi Alvarado</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        header {
+            background: #1e88e5;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #1e88e5;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .seccion {
+            margin-top: 50px;
+        }
+
+        pre {
+            background: #f3f3f3;
+            padding: 15px;
+            border-left: 5px solid #1e88e5;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+
+        nav ul {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #1e88e5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: #1e88e5;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Portafolio Digital Estudiantil</h1>
+    <h2>Kristi Alvarado</h2>
+    <p>Curso: Programación 1 – Universidad Tecnológica de Panamá</p>
+</header>
+
+<div class="contenedor">
+
+    <!-- ============================= -->
+    <!--      Í N D I C E             -->
+    <!-- ============================= -->
+
+    <h2>Índice</h2>
+    <nav>
+        <ul>
+            <li><a href="#tareas">Tareas y Asignaciones</a></li>
+            <li><a href="#manual">Manual Práctico</a></li>
+            <li><a href="#inv1">Investigación 1</a></li>
+            <li><a href="#lab2">Laboratorio Práctico 2</a></li>
+            <li><a href="#ejercicios">Ejercicios Prácticos</a></li>
+            <li><a href="#inv2">Investigación 2</a></li>
+            <li><a href="#examen1">Examen Parcial 1</a></li>
+            <li><a href="#examen2">Examen Parcial 2</a></li>
+            <li><a href="#taller1">Taller Práctico 1</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+    <!-- ============================= -->
+    <!--   TAREAS Y ASIGNACIONES      -->
+    <!-- ============================= -->
+
+    <div class="seccion" id="tareas">
+        <h2>Tareas y Asignaciones</h2>
+        <p>En esta sección se recopilan las tareas y asignaciones realizadas durante el curso de Programación 1.</p>
+    </div>
+
+
+    <!-- ============================= -->
+    <!--       MANUAL PRÁCTICO        -->
+    <!-- ============================= -->
+
+    <div class="seccion" id="manual">
+        <h2>Manual Práctico</h2>
+
+        <h3>Paso 1</h3>
+        <p>Ingresar a la página web de Java.</p>
+
+        <h3>Paso 2</h3>
+        <p>Buscar la versión más actualizada del JDK.</p>
+
+        <h3>Paso 3</h3>
+        <p>Realizar la descarga e instalación siguiendo los pasos indicados.</p>
+
+        <h3>Paso 4</h3>
+        <p>Dirigirse al Panel de Control → Sistema y Seguridad → Sistema → Configuración avanzada del sistema → Variables de entorno.</p>
+
+        <h3>Paso 5</h3>
+        <p>Ubicar la variable <b>Path</b>, hacer clic en <b>Editar</b> y luego en <b>Examinar</b>.</p>
+
+        <h3>Paso 6</h3>
+        <p>Buscar la carpeta que contiene el archivo <i>bin</i>, normalmente ubicada en:</p>
+
+        <pre>C:\Program Files\Java\jdk-XX\bin</pre>
+
+        <p>Aceptar y guardar los cambios.</p>
+
+        <h3>Paso 7</h3>
+        <p>Abrir la consola CMD y escribir:</p>
+
+        <pre>
+javac -version
+java -version
+        </pre>
+
+        <p>Si no aparece ningún error, la instalación está correcta.</p>
+    </div>
+
+    <hr>
+    <div class="seccion" id="inv1">
+        <h2>Investigación 1</h2>
+
+        <h3>La Construcción de una Clase</h3>
+        <p>
+            Una clase es un plano para definir objetos y su estructura interna. Una vez definida, puede reutilizarse sin necesidad de volver a programar todo.
+            Sus ventajas incluyen organización del código, reutilización y facilidad de modificación. Como desventajas, al inicio puede ser difícil entender
+            POO y puede volverse rígida al exigir que todo esté dentro de una clase.
+        </p>
+
+        <pre>
+class Persona {
+    void saludar() {
+        System.out.println("Hola");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        new Persona().saludar();
+    }
+}
+        </pre>
+
+        <h3>Miembros de una Clase</h3>
+        <p>
+            Son los elementos que forman parte de una clase: atributos y métodos.
+            Ventajas: organización, reutilización y encapsulación. Desventajas: complejidad para principiantes y mayor consumo de memoria si hay muchos atributos.
+        </p>
+
+        <pre>
+class Persona {
+    private String nombre;
+    public int edad;
+}
+        </pre>
+
+        <h3>Modificadores de Acceso</h3>
+        <p>
+            Determinan qué clases o métodos pueden acceder a los elementos internos de una clase. Ayudan a proteger los datos y organizar la visibilidad.
+            Desventajas: limitar demasiado puede impedir interacción entre clases y cambiar modificadores después puede generar errores.
+        </p>
+
+        <pre>
+class Persona {
+    private String n = "Ana";
+    String getN() {
+        return n;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(new Persona().getN());
+    }
+}
+        </pre>
+
+        <h3>Static</h3>
+        <p>
+            Un atributo o método estático pertenece a la clase y no a un objeto específico. Todos los objetos comparten el mismo valor.
+            Ventajas: ahorro de memoria, acceso directo y compartición de datos. Desventajas: dependencia global, dificultad para hacer pruebas y limitaciones
+            dentro de métodos estáticos.
+        </p>
+
+        <pre>
+class Ejemplo {
+    static int numero = 5;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Ejemplo.numero);
+    }
+}
+        </pre>
+    </div>
+
+    <hr>
+    <div class="seccion" id="lab2">
+        <h2>Laboratorio Práctico 2</h2>
+
+        <p>
+            Elaborado por Kristi Alvarado y Félix Caballero. Desarrollo de problemas individuales basados en los conceptos aprendidos en clase.
+        </p>
+
+        <h3>Conversión de hora 24h a 12h</h3>
+        <pre>
+Escriba un código que lea la hora en notación de 24 horas y la imprima en notación de 12 horas. Ejemplo: 13:45 → 1:45 PM.
+        </pre>
+
+        <h3>Cálculo del costo diario al conducir</h3>
+        <pre>
+Calcular gasto diario considerando kilómetros, combustible, rendimiento, estacionamiento y peajes.
+        </pre>
+
+        <h3>Precio de producto con descuentos</h3>
+        <pre>
+Calcular precio parcial, aplicar descuento (5%–50%), y mostrar precio neto.
+        </pre>
+
+        <h3>Cálculo de sueldo anual</h3>
+        <pre>
+Calcular aumento según años en la empresa y mostrar liquidación.
+        </pre>
+    </div>
+
+
+
+    <div class="seccion" id="ejercicios">
+        <h2>Ejercicios Prácticos</h2>
+
+        <h3>Hipotenusa de un triángulo rectángulo</h3>
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Cateto {
+    public static void main(String[] args) {
+        double a = 0, b = 0;
+
+        while (true) {
+            try {
+                String inputA = JOptionPane.showInputDialog("Ingrese la medida del cateto a:");
+                if (inputA == null) System.exit(0);
+                a = Double.parseDouble(inputA);
+                break;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor utiliza los caracteres correctos.");
+            }
+        }
+
+        while (true) {
+            try {
+                String inputB = JOptionPane.showInputDialog("Ingrese la medida del cateto b:");
+                if (inputB == null) System.exit(0);
+                b = Double.parseDouble(inputB);
+                break;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor utiliza los caracteres correctos.");
+            }
+        }
+
+        double hipotenusa = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        JOptionPane.showMessageDialog(null, "La hipotenusa es: " +
+        String.format("%.2f", hipotenusa));
+    }
+}
+        </pre>
+
+        <h3>Personas que más quieres</h3>
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Personas {
+    public static void main(String[] args) {
+        int n = 0;
+
+        while (true) {
+            try {
+                String input = JOptionPane.showInputDialog("Ingrese la cantidad de personas:");
+                if (input == null) System.exit(0);
+                n = Integer.parseInt(input);
+                break;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor utiliza los caracteres correctos.");
+            }
+        }
+
+        StringBuilder nombres = new StringBuilder();
+        for (int i = 1; i <= n; i++) {
+            String nombre = JOptionPane.showInputDialog("Ingrese el nombre de la persona " + i + ":");
+            if (nombre == null) System.exit(0);
+            nombres.append(nombre).append("\n");
+        }
+
+        JOptionPane.showMessageDialog(null, "Las personas que más amo son:\n" + nombres);
+    }
+}
+        </pre>
+
+        <h3>Conversión de divisas</h3>
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Divi {
+    public static void main(String[] args) {
+        double dolares = 0;
+
+        while (true) {
+            try {
+                String input = JOptionPane.showInputDialog("Ingrese cantidad en Dólares (USD):");
+                if (input == null) System.exit(0);
+                dolares = Double.parseDouble(input);
+                break;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor utiliza los caracteres correctos.");
+            }
+        }
+
+        double euro = dolares * 0.92;
+        double pesetas = dolares * 153.0;
+        double yen = dolares * 147.5;
+        double libra = dolares * 0.79;
+        double francoSuizo = dolares * 0.87;
+        double dolarCanadiense = dolares * 1.36;
+
+        String resultado = "Equivalencias:\n"
+        + "Euros: " + String.format("%.2f", euro) + "\n"
+        + "Pesetas: " + String.format("%.2f", pesetas) + "\n"
+        + "Yenes: " + String.format("%.2f", yen) + "\n"
+        + "Libras Esterlinas: " + String.format("%.2f", libra) + "\n"
+        + "Francos Suizos: " + String.format("%.2f", francoSuizo) + "\n"
+        + "Dólares Canadienses: " + String.format("%.2f", dolarCanadiense);
+
+        JOptionPane.showMessageDialog(null, resultado);
+    }
+}
+        </pre>
+
+        <h3>Cálculo de nota final universitaria</h3>
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Evaluacion {
+    public static void main(String[] args) {
+        String nombre = JOptionPane.showInputDialog("Ingrese el nombre del estudiante:");
+        if (nombre == null) System.exit(0);
+
+        double examenFinal = pedirNota("Ingrese la nota del Examen Final (33%):");
+        double examenParcial = pedirNota("Ingrese la nota del Examen Parcial (30%):");
+        double laboratorios = pedirNota("Ingrese la nota de Laboratorios (17%):");
+        double asignaciones = pedirNota("Ingrese la nota de Asignaciones (10%):");
+        double portafolio = pedirNota("Ingrese la nota del Portafolio Digital (5%):");
+        double asistencia = pedirNota("Ingrese la nota de Asistencia (5%):");
+
+        double notaFinal = (examenFinal * 0.33)
+        + (examenParcial * 0.30)
+        + (laboratorios * 0.17)
+        + (asignaciones * 0.10)
+        + (portafolio * 0.05)
+        + (asistencia * 0.05);
+
+        JOptionPane.showMessageDialog(null,
+        "Estudiante: " + nombre + "\n\n" +
+        "Examen Final (33%): " + String.format("%.2f", examenFinal) + "\n" +
+        "Examen Parcial (30%): " + String.format("%.2f", examenParcial) + "\n" +
+        "Laboratorios (17%): " + String.format("%.2f", laboratorios) + "\n" +
+        "Asignaciones (10%): " + String.format("%.2f", asignaciones) + "\n" +
+        "Portafolio Digital (5%): " + String.format("%.2f", portafolio) + "\n" +
+        "Asistencia (5%): " + String.format("%.2f", asistencia) + "\n\n" +
+        "Nota Final: " + String.format("%.2f", notaFinal));
+    }
+
+    private static double pedirNota(String mensaje) {
+        double nota = 0;
+        while (true) {
+            try {
+                String input = JOptionPane.showInputDialog(mensaje);
+                if (input == null) System.exit(0);
+                nota = Double.parseDouble(input);
+                break;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor utiliza los caracteres correctos.");
+            }
+        }
+        return nota;
+    }
+}
+        </pre>
+    </div>
+
+    <hr>
+    <div class="seccion" id="inv2">
+        <h2>Investigación 2</h2>
+
+        <h3>Análisis FODA: IDE NetBeans vs Eclipse</h3>
+        <p>
+            Análisis comparativo entre ambos entornos de desarrollo considerando Fortalezas, Oportunidades,
+            Debilidades y Amenazas según su uso académico y profesional.
+        </p>
+
+        <h3>Conversión Celsius ↔ Fahrenheit</h3>
+        <pre>
+F = 9/5 * C + 32
+        </pre>
+
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Temperatura {
+    public static void main(String[] args) {
+        for (int i = 0; i < 3; i++) {
+            String cStr = JOptionPane.showInputDialog("Ingrese grados Celsius:");
+            if (cStr == null) System.exit(0);
+
+            double c = Double.parseDouble(cStr);
+            double f = (9.0 / 5.0) * c + 32;
+
+            JOptionPane.showMessageDialog(null,
+            c + "°C equivalen a " + f + "°F");
+        }
+    }
+}
+        </pre>
+
+        <h3>Caso de Estudio: Esquema de Red LAN</h3>
+        <p>
+            Diseño de una red administrativa para el Colegio AB considerando conectividad inalámbrica y cableada
+            en todos los espacios. El esquema incluye servidores, routing y distribución interna.
+        </p>
+    </div>
+
+
+    <div class="seccion" id="examen1">
+        <h2>Examen Parcial 1</h2>
+
+        <h3>Conversión de Fechas</h3>
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Fechas {
+    public static void main(String[] args) {
+        String[][] fechas = new String[3][3];
+        int totalFechas = 0;
+
+        while (totalFechas < 3) {
+            String entrada = JOptionPane.showInputDialog(null,
+            "Ingrese una fecha en formato: día, mes, año\nEjemplo: 15, febrero, 1989");
+
+            if (entrada == null) {
+                JOptionPane.showMessageDialog(null, "Proceso cancelado");
+                System.exit(0);
+            }
+
+            entrada = entrada.trim().toLowerCase();
+            String[] partes = entrada.split(",");
+
+            if (partes.length != 3) {
+                JOptionPane.showMessageDialog(null, "Formato incorrecto");
+                continue;
+            }
+
+            try {
+                int dia = Integer.parseInt(partes[0].trim());
+                String mesTexto = partes[1].trim();
+                int anio = Integer.parseInt(partes[2].trim());
+
+                int mes = convertirMes(mesTexto);
+
+                if (mes == -1 || dia < 1 || dia > 31 ||
+                String.valueOf(anio).length() != 4) {
+                    JOptionPane.showMessageDialog(null, "Formato incorrecto");
+                    continue;
+                }
+
+                fechas[totalFechas][0] = String.valueOf(dia);
+                fechas[totalFechas][1] = String.valueOf(mes);
+                fechas[totalFechas][2] = String.valueOf(anio);
+
+                JOptionPane.showMessageDialog(null,
+                "Fecha registrada: " + dia + " " + mes + " " + anio);
+
+                totalFechas++;
+
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Formato incorrecto");
+            }
+        }
+
+        String fechaMin = fechas[0][0] + "/" + fechas[0][1] + "/" + fechas[0][2];
+        String fechaMax = fechaMin;
+
+        for (int i = 1; i < 3; i++) {
+            String actual = fechas[i][0] + "/" + fechas[i][1] + "/" + fechas[i][2];
+
+            if (compararFechas(fechas[i], fechas[0]) < 0) fechaMin = actual;
+            if (compararFechas(fechas[i], fechas[0]) > 0) fechaMax = actual;
+        }
+
+        JOptionPane.showMessageDialog(null,
+        "Fecha más baja: " + fechaMin +
+        "\nFecha más alta: " + fechaMax);
+    }
+
+    public static int convertirMes(String mes) {
+        String[] meses = {"enero","febrero","marzo","abril","mayo","junio",
+                          "julio","agosto","septiembre","octubre",
+                          "noviembre","diciembre"};
+
+        for (int i = 0; i < meses.length; i++) {
+            if (mes.equals(meses[i])) return i + 1;
+        }
+        return -1;
+    }
+
+    public static int compararFechas(String[] f1, String[] f2) {
+        int dia1 = Integer.parseInt(f1[0]);
+        int mes1 = Integer.parseInt(f1[1]);
+        int anio1 = Integer.parseInt(f1[2]);
+
+        int dia2 = Integer.parseInt(f2[0]);
+        int mes2 = Integer.parseInt(f2[1]);
+        int anio2 = Integer.parseInt(f2[2]);
+
+        if (anio1 != anio2) return anio1 - anio2;
+        if (mes1 != mes2) return mes1 - mes2;
+        return dia1 - dia2;
+    }
+}
+        </pre>
+
+        <h3>Cálculo de Edad</h3>
+        <pre>
+import javax.swing.JOptionPane;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeParseException;
+
+public class Edad {
+    public static void main(String[] args) {
+        try {
+            String nacimientoStr = JOptionPane.showInputDialog(null,
+            "Ingrese la fecha de nacimiento en formato: dd/MM/yyyy");
+
+            if (nacimientoStr == null) System.exit(0);
+
+            String actualStr = JOptionPane.showInputDialog(null,
+            "Ingrese la fecha actual en formato: dd/MM/yyyy");
+
+            if (actualStr == null) System.exit(0);
+
+            LocalDate nacimiento = parsearFecha(nacimientoStr);
+            LocalDate actual = parsearFecha(actualStr);
+
+            if (nacimiento == null || actual == null ||
+            actual.isBefore(nacimiento)) {
+                JOptionPane.showMessageDialog(null, "Formato incorrecto");
+                System.exit(0);
+            }
+
+            Period edad = Period.between(nacimiento, actual);
+
+            if (edad.getYears() >= 1) {
+                JOptionPane.showMessageDialog(null,
+                "La edad es: " + edad.getYears() + " años.");
+            } else {
+                JOptionPane.showMessageDialog(null,
+                "La edad es: " + edad.getMonths() + " meses y " +
+                edad.getDays() + " días.");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Formato incorrecto");
+        }
+    }
+
+    private static LocalDate parsearFecha(String fecha) {
+        try {
+            String[] partes = fecha.split("/");
+
+            if (partes.length != 3) return null;
+
+            int dia = Integer.parseInt(partes[0]);
+            int mes = Integer.parseInt(partes[1]);
+            int anio = Integer.parseInt(partes[2]);
+
+            if (dia < 1 || dia > 31 || mes < 1 || mes > 12 ||
+            String.valueOf(anio).length() != 4) {
+                return null;
+            }
+
+            return LocalDate.of(anio, mes, dia);
+
+        } catch (NumberFormatException | DateTimeParseException e) {
+            return null;
+        }
+    }
+}
+        </pre>
+
+        <h3>Año Bisiesto</h3>
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Bisiesto {
+    public static void main(String[] args) {
+        try {
+            String entrada = JOptionPane.showInputDialog(null,
+            "Ingrese un año de 4 dígitos");
+
+            if (entrada == null) System.exit(0);
+
+            if (!entrada.matches("\\d{4}")) {
+                JOptionPane.showMessageDialog(null, "Formato incorrecto");
+                System.exit(0);
+            }
+
+            int anio = Integer.parseInt(entrada);
+            boolean esBisiesto = false;
+
+            if (anio % 4 == 0) {
+                if (anio % 100 == 0) {
+                    if (anio % 400 == 0) esBisiesto = true;
+                } else {
+                    esBisiesto = true;
+                }
+            }
+
+            if (esBisiesto) {
+                JOptionPane.showMessageDialog(null, anio + " es bisiesto.");
+            } else {
+                JOptionPane.showMessageDialog(null, anio + " no es bisiesto.");
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Formato incorrecto");
+        }
+    }
+}
+        </pre>
+
+        <h3>Salario Semanal</h3>
+        <pre>
+import javax.swing.JOptionPane;
+
+public class Salario {
+    public static void main(String[] args) {
+        try {
+            String horasStr = JOptionPane.showInputDialog(null,
+            "Ingrese horas trabajadas:");
+
+            if (horasStr == null) return;
+
+            if (horasStr.length() > 2) return;
+
+            double horas = Double.parseDouble(horasStr);
+            if (horas < 0) return;
+
+            String tasaStr = JOptionPane.showInputDialog(null,
+            "Ingrese la tasa por hora:");
+
+            if (tasaStr == null) return;
+
+            double tasa = Double.parseDouble(tasaStr);
+            if (tasa < 0) return;
+
+            double salarioBruto;
+            if (horas <= 40) {
+                salarioBruto = horas * tasa;
+            } else {
+                double extras = horas - 40;
+                salarioBruto = (40 * tasa) + (extras * tasa * 1.5);
+            }
+
+            double impuesto = (salarioBruto > 750) ? salarioBruto * 0.10 : 0;
+            double salarioNeto = salarioBruto - impuesto;
+
+            JOptionPane.showMessageDialog(null,
+            "Salario Bruto: " + salarioBruto +
+            "\nImpuesto: " + impuesto +
+            "\nSalario Neto: " + salarioNeto);
+
+        } catch (Exception e) {
+        }
+    }
+}
+        </pre>
+
+    </div>
+
+    <hr>
+    <div class="seccion" id="taller1">
+        <h2>Taller Práctico 1</h2>
+
+        <h3>Paso 1: Preparación del Entorno Virtual</h3>
+        <p>
+            Se instaló VirtualBox con su configuración estándar. Luego se instaló Windows Server en una máquina virtual,
+            configurando particiones, usuario administrador y ajustes iniciales.
+        </p>
+
+        <h3>Paso 2: Terminal e Instalación MySQL</h3>
+        <p>Abrir el Command Prompt como administrador.</p>
+
+        <h3>Paso 3: Instalación de MySQL Server</h3>
+        <p>
+            Descargar MySQL Installer, seleccionar MySQL Server, Workbench y Shell. Completar el proceso de instalación y
+            la configuración inicial incluyendo autenticación fuerte y creación de contraseña.
+        </p>
+
+        <h3>Paso 3.3: Configuración MySQL</h3>
+        <p>Configuración de red, autenticación, servicios y ejecución final.</p>
+
+        <h3>Paso 3.4: Conexión a MySQL por Primera Vez</h3>
+        <p>Verificación del cliente MySQL dentro del directorio bin y conexión usando la contraseña creada.</p>
+
+        <h3>Paso 3.5: Comandos de Verificación</h3>
+        <pre>
+SHOW DATABASES;
+SELECT VERSION();
+SELECT user FROM mysql.user;
+        </pre>
+
+        <h3>Paso 3.6: Crear Base de Datos de Prueba</h3>
+        <pre>
+CREATE DATABASE prueba;
+USE prueba;
+CREATE TABLE test (id INT, nombre VARCHAR(50));
+INSERT INTO test VALUES (1, 'test_exitoso');
+SELECT * FROM test;
+        </pre>
+
+        <h3>Paso 4: Configuración para Conexión Remota</h3>
+        <p>
+            Crear usuario remoto, otorgar permisos, editar archivo my.ini agregando
+            <b>bind-address = 0.0.0.0</b>, reiniciar servicio MySQL y configurar firewall.
+        </p>
+
+        <pre>
+CREATE USER 'usuario_remoto'@'%' IDENTIFIED BY 'clave123';
+GRANT ALL PRIVILEGES ON *.* TO 'usuario_remoto'@'%';
+FLUSH PRIVILEGES;
+        </pre>
+
+        <h3>Paso 4.5: Obtener IP de la Máquina Virtual</h3>
+        <pre>
+ipconfig
+        </pre>
+
+        <h3>Paso 4.6: Probar Conexión Remota</h3>
+        <pre>
+mysql -h 192.168.X.X -u usuario_remoto -p
+        </pre>
+
+        <h3>Topología de Red Chiriquí – Panamá</h3>
+        <p>
+            Se diseñó una topología de red entre dos sedes interconectadas mediante WAN. La sede de Chiriquí incluye PC’s y
+            un servidor Java, mientras que Panamá contiene un servidor replicado de BD.
+        </p>
+    </div>
+
+
+
+    <div class="seccion" id="examen2">
+        <h2>Examen Parcial 2</h2>
+
+        <h3>NibarraSystem – Estructura del Proyecto</h3>
+        <pre>
+NibarraSystem/
+    com/
+        nibarra/
+            dao/
+                DatabaseConnection.java
+                UsuarioDAO.java
+                SeguimientoWebServer.java
+                ChatServer.java
+                ChatBotService.java
+            gui/
+                LoginFrame.java
+                MainFrame.java
+                EquiposPanel.java
+                CalendarioPanel.java
+                MantenimientoPanel.java
+                ChatBotPanel.java
+                ChatHumanoPanel.java
+                FloatingChatBubble.java
+        lib/
+            mysql-connector-j-9.4.0.jar
+
+COMPILAR.bat
+EJECUTAR.bat
+        </pre>
+
+        <h3>Módulo de Autenticación</h3>
+        <p>LoginFrame.java gestiona la interfaz de inicio de sesión con validación.</p>
+
+        <h3>DatabaseConnection.java</h3>
+        <pre>
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DatabaseConnection {
+    private static final String URL = "jdbc:mysql://localhost:3306/nibarra";
+    private static final String USER = "root";
+    private static final String PASS = "1234";
+
+    public static Connection conectar() {
+        try {
+            return DriverManager.getConnection(URL, USER, PASS);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+}
+        </pre>
+
+        <h3>UsuarioDAO.java</h3>
+        <pre>
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class UsuarioDAO {
+    public boolean validar(String usuario, String clave) {
+        try (Connection con = DatabaseConnection.conectar()) {
+            PreparedStatement stmt =
+            con.prepareStatement("SELECT * FROM usuarios WHERE usuario=? AND clave=?");
+
+            stmt.setString(1, usuario);
+            stmt.setString(2, clave);
+
+            ResultSet rs = stmt.executeQuery();
+            return rs.next();
+
+        } catch (Exception e) {
+            return false;
+        }
+    }
+}
+        </pre>
+
+        <h3>ChatBotService.java</h3>
+        <pre>
+import java.util.HashMap;
+
+public class ChatBotService {
+    private HashMap&lt;String, String&gt; knowledge = new HashMap&lt;&gt;();
+
+    public ChatBotService() {
+        knowledge.put("java", "Java es un lenguaje orientado a objetos.");
+        knowledge.put("mysql", "MySQL es un motor de base de datos.");
+    }
+
+    public String responder(String pregunta) {
+        pregunta = pregunta.toLowerCase();
+        for (String key : knowledge.keySet()) {
+            if (pregunta.contains(key)) return knowledge.get(key);
+        }
+        return "No entendí la consulta.";
+    }
+}
+        </pre>
+
+        <h3>SeguimientoWebServer.java</h3>
+        <pre>
+import java.io.*;
+import java.net.*;
+import java.sql.*;
+
+public class SeguimientoWebServer {
+    public static void main(String[] args) throws Exception {
+        ServerSocket server = new ServerSocket(8080);
+        while (true) {
+            Socket s = server.accept();
+            PrintWriter out = new PrintWriter(s.getOutputStream(), true);
+
+            out.println("HTTP/1.1 200 OK");
+            out.println("Content-Type: text/html\n");
+            out.println("&lt;h1&gt;Seguimiento de Equipo&lt;/h1&gt;");
+
+            s.close();
+        }
+    }
+}
+        </pre>
+
+        <h3>ChatServer.java</h3>
+        <pre>
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ChatServer {
+    public static void main(String[] args) {
+        try {
+            ServerSocket server = new ServerSocket(9000);
+            Socket s = server.accept();
+
+            BufferedReader in =
+            new BufferedReader(new InputStreamReader(s.getInputStream()));
+            PrintWriter out =
+            new PrintWriter(s.getOutputStream(), true);
+
+            out.println("Conectado al servidor de chat.");
+
+            String mensaje;
+            while ((mensaje = in.readLine()) != null) {
+                out.println("Servidor: " + mensaje);
+            }
+
+        } catch (Exception e) {
+        }
+    }
+}
+        </pre>
+
+        <h3>Interfaz Principal – MainFrame.java</h3>
+        <pre>
+import javax.swing.*;
+
+public class MainFrame extends JFrame {
+    public MainFrame() {
+        setTitle("Nibarra System");
+        setSize(800, 600);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        JTabbedPane tabs = new JTabbedPane();
+        tabs.add("Equipos", new EquiposPanel());
+        tabs.add("Calendario", new CalendarioPanel());
+        tabs.add("Mantenimiento", new MantenimientoPanel());
+        tabs.add("ChatBot", new ChatBotPanel());
+
+        add(tabs);
+        setVisible(true);
+    }
+}
+        </pre>
+
+        <h3>EquiposPanel.java</h3>
+        <pre>
+import javax.swing.*;
+import java.awt.*;
+
+public class EquiposPanel extends JPanel {
+    public EquiposPanel() {
+        setLayout(new BorderLayout());
+        add(new JLabel("Gestión de Equipos"), BorderLayout.NORTH);
+    }
+}
+        </pre>
+
+        <h3>CalendarioPanel.java</h3>
+        <pre>
+import javax.swing.*;
+import java.awt.*;
+
+public class CalendarioPanel extends JPanel {
+    public CalendarioPanel() {
+        setLayout(new BorderLayout());
+        add(new JLabel("Calendario de Mantenimientos"), BorderLayout.NORTH);
+    }
+}
+        </pre>
+
+        <h3>MantenimientoPanel.java</h3>
+        <pre>
+import javax.swing.*;
+import java.awt.*;
+
+public class MantenimientoPanel extends JPanel {
+    public MantenimientoPanel() {
+        setLayout(new BorderLayout());
+        add(new JLabel("Panel de Mantenimiento"), BorderLayout.NORTH);
+    }
+}
+        </pre>
+
+        <h3>ChatBotPanel.java</h3>
+        <pre>
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ChatBotPanel extends JPanel {
+    private ChatBotService bot = new ChatBotService();
+
+    public ChatBotPanel() {
+        setLayout(new BorderLayout());
+
+        JTextArea area = new JTextArea();
+        JTextField campo = new JTextField();
+
+        add(new JScrollPane(area), BorderLayout.CENTER);
+        add(campo, BorderLayout.SOUTH);
+
+        campo.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String p = campo.getText();
+                area.append("Tú: " + p + "\n");
+                area.append("Bot: " + bot.responder(p) + "\n\n");
+                campo.setText("");
+            }
+        });
+    }
+}
+        </pre>
+    </div>
+
+    <hr>
+    <div class="seccion" id="conclusion">
+        <h2>Conclusión</h2>
+
+        <p>
+            A lo largo de este semestre en la asignatura de Programación I pude desarrollar
+            habilidades fundamentales que representan la base de mi formación como futura
+            profesional en el área de la tecnología y la ciberseguridad. Cada práctica, proyecto
+            y evaluación me permitió no solo fortalecer mis conocimientos en Java, sino también
+            comprender la importancia de la lógica, la organización del código y el pensamiento
+            estructurado para resolver problemas de manera eficiente.
+        </p>
+
+        <p>
+            El trabajo constante con estructuras básicas, ciclos, arreglos, métodos y manejo de
+            ventanas con JOptionPane reforzó mi capacidad para transformar ideas en programas
+            funcionales. Además, el desarrollo del proyecto NibarraSystem me permitió enfrentarme
+            a un entorno más cercano al trabajo real, integrando conexión a bases de datos, 
+            creación de interfaces gráficas, modularidad y comunicación cliente-servidor. 
+            Este proyecto me enseñó la relevancia del diseño, la planificación y la integración 
+            de diferentes componentes dentro de un sistema.
+        </p>
+
+        <p>
+            Finalmente, esta materia me ayudó a comprender que programar no es solo escribir
+            líneas de código: es analizar, construir, probar, fallar, corregir y aprender. 
+            Hoy termino este semestre con mayor confianza, mejores habilidades técnicas y una
+            visión más clara de mi camino en la tecnología. Todo lo aprendido aquí será la base 
+            para continuar avanzando hacia niveles más altos de desarrollo y ciberseguridad.
+        </p>
+    </div>
+    <footer style="text-align:center; padding: 40px 0; margin-top:50px; color:#555;">
+        <p>Portafolio de Programación I — Kristi Alvarado</p>
+        <p>Universidad Tecnológica de Panamá · 2025</p>
+    </footer>
+
+</body>
+</html>

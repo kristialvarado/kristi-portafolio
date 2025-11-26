@@ -1149,5 +1149,20 @@ public class ChatBotPanel extends JPanel {
     <button class="carousel-btn next">&#10095;</button>
   </div>
 </section>
+<script>
+let index = 0;
+
+function showSlide(i) {
+  const slides = document.querySelectorAll(".carousel img");
+  index += i;
+
+  if (index < 0) index = slides.length - 1;
+  if (index >= slides.length) index = 0;
+
+  const carousel = document.querySelector(".carousel");
+  carousel.style.transform = `translateX(${-index * 100}%)`;
+}
+</script>
+
 </body>
 </html>
